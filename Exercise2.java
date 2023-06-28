@@ -23,9 +23,9 @@ public class Exercise2 {
         try {
             int choice = Integer.parseInt(c.readLine());
             if (choice == 1) {
-                //smaller();
+                smaller(num1, num2);
             } else if (choice == 2) {
-                bigger(num1,num2);
+                bigger(num1, num2);
             } else {
                 System.out.println("Väärä valinta");
             }
@@ -42,6 +42,14 @@ public class Exercise2 {
             System.out.println("Luku " + a + " on suurempi");
         } else {
             System.out.println("Luku " + b + " on suurempi");
+        }
+    }
+
+    private static void smaller(int a, int b) {
+        if (a < b) {
+            System.out.println("Luku " + a + " on pienempi");
+        } else {
+            System.out.println("Luku " + b + " on pinempi");
         }
     }
 }
