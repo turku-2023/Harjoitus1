@@ -40,16 +40,20 @@ public class Exercise2 {
     private static void bigger(int a, int b) {
         if (a > b) {
             System.out.println("Luku " + a + " on suurempi");
-        } else {
+        } else if (b > a) {
             System.out.println("Luku " + b + " on suurempi");
+        } else {
+            System.out.println("Luvut ovat yhtäsuuret");
         }
     }
 
     private static void smaller(int a, int b) {
         if (a < b) {
             System.out.println("Luku " + a + " on pienempi");
-        } else {
+        } else if (b < a) {
             System.out.println("Luku " + b + " on pinempi");
+        } else {
+            System.out.println("Luvut ovat yhtäsuuret");
         }
     }
 }
