@@ -2,7 +2,7 @@ import java.io.Console;
 
 public class Exercise2 {
     public static void main(String args[]) {
-        int num1=0, num2=0;
+        int num1 = 0, num2 = 0;
         Console c = System.console();
         System.out.println("Anna eka luku");
         try {
@@ -16,14 +16,32 @@ public class Exercise2 {
         } catch (Exception e) {
             System.out.println("Et antanut kokonaislukua");
         }
-        if(num1>num2){
-            System.out.println("Luku "+num1+" on suurempi");
-        }
-        else{
-            System.out.println("Luku "+num2+" on suurempi");
+        System.out.println("Valitse ");
+        System.out.println("1=Tulostetaan pienempi ");
+        System.out.println("2=Tulostetaan suurempi ");
+
+        try {
+            int choice = Integer.parseInt(c.readLine());
+            if (choice == 1) {
+                bigger(num1,num2);
+            } else if (choice == 2) {
+                //smaller();
+            } else {
+                System.out.println("Väärä valinta");
+            }
+        } catch (Exception e) {
+            // TODO: handle exception
         }
 
         // System.out.println("Eka argumentti="+args[0]);
         // System.out.println("Toka argumentti="+args[1]);
+    }
+
+    private static void bigger(int a, int b) {
+        if (a > b) {
+            System.out.println("Luku " + a + " on suurempi");
+        } else {
+            System.out.println("Luku " + b + " on suurempi");
+        }
     }
 }
