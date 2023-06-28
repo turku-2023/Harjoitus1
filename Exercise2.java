@@ -23,9 +23,9 @@ public class Exercise2 {
         try {
             int choice = Integer.parseInt(c.readLine());
             if (choice == 1) {
-                bigger(num1,num2);
-            } else if (choice == 2) {
                 //smaller();
+            } else if (choice == 2) {
+                bigger(num1,num2);
             } else {
                 System.out.println("Väärä valinta");
             }
